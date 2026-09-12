@@ -1,16 +1,16 @@
-// Formulario inicial
+// form datos
 let inputCantidad = document.querySelector("#cantidad");
 let inputConsumoPorHora = document.querySelector("#consumoPorHora");
 let inputCostoPorKwh = document.querySelector("#costoPorKwh");
 let btnIniciar = document.querySelector("#btnIniciar");
 
-// Formulario por obra
+// form obras
 let inputNombreObra = document.querySelector("#nombreObra");
 let inputCantidadLuces = document.querySelector("#cantidadLuces");
 let inputTiempoLuces = document.querySelector("#tiempoLuces");
 let btnAgregarObra = document.querySelector("#btnAgregarObra");
 
-// Resultados
+// resultados
 let btnCalcular = document.querySelector("#btnCalcular");
 let consumoTotal = document.querySelector("#consumoTotal");
 let consumoPromedio = document.querySelector("#consumoPromedio");
