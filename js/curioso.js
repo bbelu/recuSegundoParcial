@@ -17,7 +17,7 @@ let datoCurioso = [
 
 "Utiliza la luz como lenguaje poético para explorar temas de identidad, memoria y presencia.",
 
-"En su proyecto Vectorial Elevation, ciudadanos controlaban reflectores gigantes a través de internet.",
+"En su proyecto Vectorial Elevation, ciudadanos controlaban reflectores gigantes a través de internet."
 ];
 
 
