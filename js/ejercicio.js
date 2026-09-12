@@ -1,0 +1,1 @@
+let imagenObra = document.querySelector("#imgObra");
