@@ -118,10 +118,13 @@ padding: 1em;
  margin: 0 auto;
  border-top: 0;
 }
-img{
-        display: block;
-        margin: auto;
-        width: 75%;
+
+/*img */
+
+#imagen img {
+  display: block;
+  margin: auto;
+  width: 75%;
      
     }
 
