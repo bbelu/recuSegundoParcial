@@ -121,13 +121,19 @@ padding: 1em;
 
 /*img */
 
-#imagen img {
+#imagenIndex img {
   display: block;
   margin: auto;
   width: 75%;
-     
-    }
 
+    }
+#imagenEj img {
+  display: block;
+  margin: auto;
+  width: 55%;
+  margin-top: 1rem;
+
+    }
 
 #datosc, #galeriaObras{
   
