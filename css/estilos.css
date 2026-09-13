@@ -135,6 +135,17 @@ padding: 1em;
 
     }
 
+#imagenjuntas {
+ display: flex;
+justify-content: center;
+
+ }
+
+ #imagenjuntas img {
+  width: 45%;
+  margin: 0 1rem;
+ }
+
 #datosc, #galeriaObras{
   
   text-align: center;

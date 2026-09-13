@@ -38,4 +38,4 @@ botonAnterior.addEventListener('click', function(){
   mostrarObra();
 });
 
-mostrarObra(); // recomendo IA, para que no quede vacio al cargar la pagina por primera vez
+mostrarObra(); // recomendo IA, para que no quede vacio al cargar la pagina por primera vezs

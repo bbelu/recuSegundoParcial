@@ -110,3 +110,75 @@ if (obras.length === cantidadObras) {
 }
 
 });
+
+
+btnCalcular.addEventListener('click', function(){
+
+
+  let consumoTotalCalculado = 0;
+  for (let i = 0; i < obras.length; i++) {
+    let consumoDeEstaObra = consumoPorHora * obras[i].tiempo * obras[i].luces;
+    consumoTotalCalculado = consumoTotalCalculado + consumoDeEstaObra;
+  }
+  let consumoPromedioCalculado = consumoTotalCalculado / obras.length;
+
+ 
+  let obraMax = obras[0];
+  for (let i = 1; i < obras.length; i++) {
+    if (obras[i].tiempo > obraMax.tiempo) {
+      obraMax = obras[i];
+    }
+  }
+  let costoObraMax = consumoPorHora * obraMax.tiempo * obraMax.luces * costoPorKwh;
+
+  
+  let contadorMasDe20 = 0;
+  for (let i = 0; i < obras.length; i++) {
+    if (obras[i].luces > 20) {
+      contadorMasDe20++;
+    }
+  }
+  let porcentajeCalculado = (contadorMasDe20 / obras.length) * 100;
+
+
+  consumoTotal.innerText = "Consumo diario total: " + consumoTotalCalculado + " kWh";
+  consumoPromedio.innerText = "Consumo diario promedio por obra: " + consumoPromedioCalculado + " kWh";
+  obraMaxTiempo.innerText = "Obra con mayor tiempo de funcionamiento: " + obraMax.nombre + " - Costo diario: $" + costoObraMax;
+  porcentajeLuces.innerText = "Porcentaje de obras con más de 20 luces: " + porcentajeCalculado + "%";
+
+});
+
+btnReiniciar.addEventListener('click', function(){
+
+  
+  obras = [];
+
+
+  inputCantidad.value = "";
+  inputConsumoPorHora.value = "";
+  inputCostoPorKwh.value = "";
+  inputNombreObra.value = "";
+  inputCantidadLuces.value = "";
+  inputTiempoLuces.value = "";
+
+
+  consumoTotal.innerText = "";
+  consumoPromedio.innerText = "";
+  obraMaxTiempo.innerText = "";
+  porcentajeLuces.innerText = "";
+
+  
+  habilitarDeshabilitar(inputCantidad, false);
+  habilitarDeshabilitar(inputConsumoPorHora, false);
+  habilitarDeshabilitar(inputCostoPorKwh, false);
+  habilitarDeshabilitar(btnIniciar, false);
+
+  habilitarDeshabilitar(inputNombreObra, true);
+  habilitarDeshabilitar(inputCantidadLuces, true);
+  habilitarDeshabilitar(inputTiempoLuces, true);
+  habilitarDeshabilitar(btnAgregarObra, true);
+
+  habilitarDeshabilitar(btnCalcular, true);
+  habilitarDeshabilitar(btnReiniciar, true);
+
+});
